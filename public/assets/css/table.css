@@ -1,0 +1,22 @@
+.want-table {
+    /* border: 1px dashed #3874ff; */
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+td {
+    margin: 10px 5px;
+    padding: 10px 5px;
+    text-align: start;
+
+}
+
+th {
+    margin: 10px 5px;
+    padding: 10px 5px;
+    text-align: start;
+}
+
+tr {
+    border-bottom: 1px solid #3874ff;
+}

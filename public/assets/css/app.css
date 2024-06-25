@@ -1,0 +1,65 @@
+.primary {
+    background-color: #Fbba40;
+}
+
+.secondery {
+    background-color: #3874ff;
+}
+
+
+
+.font-10 {
+    font-size: 10px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+a {
+    color: #Fbba40;
+}
+
+a:hover {
+    color: #3874ff;
+    text-decoration: underline;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* .nav-item+.nav-item::before {
+    float: left;
+    content: var(#3874ff, url(data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' height='10' width='6' fill='%236e7891' viewBox='0 0 256 480' %3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E));
+    color: #3874ff;
+    font-weight: bold;
+
+} */
+
+.btn-secondry {
+    background-color: #3874ff;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 18px;
+
+}
