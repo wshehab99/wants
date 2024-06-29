@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Want;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'body' => fake()->sentence(28),
+            'comentable_id' => rand(1, 2000),
+            'comentable_type' => Want::class,
+            'user_id' => rand(1, 30),
         ];
     }
 }

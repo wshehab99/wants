@@ -28,46 +28,39 @@
               </div>
             </div>
             <div >
-              <div >
-                <table class="want-table">
-                  <thead>
-                    <tr >
-                      <th ></th>
-                      <th >title</th>
-                      <th >Author</th>
-                      <th >Email</th>
-                      <th >Category</th>
-                      <th >LAST SEEN</th>
-                      <th>LAST ORDER</th>
-                    </tr>
-                  </thead>
-                  <tbody >
-                    @foreach($wants as $key=> $want)
-                         <tr >
-                                                  <td >{{$key+1}}</td>
-
-                            <td ><a href="/wants/{{$want->id}}">{{$want->title}}</a></td>
-
-                        <td ><p class="mb-0 ms-3 text-1100 fw-bold">{{$want->author->name}}</p></td>
-                      <td >
-                        <a  href="mailto:{{$want->author->email}}">
-                            {{$want->author->email}}
-                        </a>
-                    </td>
-                      <td >{{$want->category->name}}</td>
-                      <td >{{$want->updated_at->diffForHumans()}}</td>
-                      <td >{{$want->created_at->diffForHumans()}}</td>
-                    </tr>
-                    @endForeach
-               
+              <div class="card">
+                <div class="avatar">
+                  <div class="circle-avatar">
+                    {{substr($want->author->name, 0,1)}}
+                  </div>
+                  <div>{{$want->author->name}}</div>
              
-
-                  </tbody>
-                </table>
+                </div>
+            <div class="div">{{$want->title}}</div>
+            <div class="font-14">
+                    {{$want->body}}
+                  </div>
               </div>
            
             </div>
           </div>
+          @foreach($want->comments as $comment)
+               <div class="card mt-15 ml-15">
+                <div class="avatar">
+                  <div class="circle-avatar">
+                    {{substr($comment->author->name, 0,1)}}
+                  </div>
+                  <div>{{$comment->author->name}}</div>
+             
+                </div>
+            <div class="font-14">
+                    {{$comment->body}}
+                  </div>
+              </div>
+           
+            </div>
+        
+          @endForeach
         </div>
     
       </div>

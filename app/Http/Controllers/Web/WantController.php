@@ -14,4 +14,19 @@ class WantController extends Controller
             'wants' => Want::with(['author', 'category'])->get(),
         ]);
     }
+    public function show(string $id)
+    {
+        $want = Want::find($id);
+        if (!$want) {
+            abort(404);
+        }
+        $want->load([
+            'comments' => function ($query) {
+                $query->with(['author']);
+            }
+        ]);
+        return view('admin.wants.show', [
+            'want' => $want,
+        ]);
+    }
 }
