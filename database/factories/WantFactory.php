@@ -18,9 +18,9 @@ class WantFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
-            'body' => fake()->paragraph(5),
-            'user_id' => rand(1, 15),
-            'category_id' => rand(1, 15),
+            'body' => fake()->paragraph(10),
+            'user_id' => rand(1, 30),
+            'category_id' => rand(1, 30),
         ];
     }
 }
