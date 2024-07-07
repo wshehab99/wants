@@ -11,7 +11,7 @@ class WantController extends Controller
     public function index()
     {
         return view('admin.wants.index', [
-            'wants' => Want::with(['author', 'category'])->get(),
+            'wants' => Want::with(['author', 'category'])->paginate(),
         ]);
     }
     public function show(string $id)
